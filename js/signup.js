@@ -12,15 +12,21 @@ const signup = (event) => {
     email: email,
     role: Number(usertype),
   };
+  console.log(userdata);
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       var user = userCredential.user;
+      db.collection("users")
+        .doc(user.uid)
+        .set(userdata)
+        .then((res) => {
+          console.log(" res", res);
 
-      db.collection("users").doc(user.uid).set(userdata);
+          window.location.href = "index.html";
+        });
       console.log(user.uid);
-      window.location.href = "index.html";
     })
     .catch((error) => {
       var errorCode = error.code;

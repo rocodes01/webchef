@@ -1,6 +1,8 @@
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
 const db = firebase.firestore();
+let userRef = db.collection("users");
+let currentUser;
 const login = (e) => {
   e.preventDefault();
   const email = document.getElementById("InputEmail").value;
@@ -10,8 +12,16 @@ const login = (e) => {
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in
-      var user = userCredential.user;
-      console.log(user);
+      currentUser = userRef
+        .where("email", "==", userCredential.user.email)
+        .get()
+        .then((snapshot) => {
+          if (snapshot?.docs[0]?.data().role == 1) {
+            window.location.href = `home.html`;
+          } else if (snapshot?.docs[0]?.data().role == 0) {
+            window.location.href = `user_home.html`;
+          }
+        });
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -30,18 +40,19 @@ console.log("FIreBase ", firebase);
 auth.onAuthStateChanged(function (user) {
   if (user) {
     // User is signed in.
-    userRef = db.collection("users");
-    currentUser = userRef
-      .where("email", "==", user.email)
-      .get()
-      .then((snapshot) => {
-        if (snapshot.docs[0].data().role == "1") {
-          window.location.href = `home.html`;
-        } else {
-          window.location.href = `user_home.html`;
-        }
-        console.log(snapshot.docs[0].data());
-      });
+    // userRef = db.collection("users");
+    // currentUser = userRef
+    //   .where("email", "==", user.email)
+    //   .get()
+    //   .then((snapshot) => {
+    //     if (snapshot?.docs[0]?.data().role == "1") {
+    //       window.location.href = `home.html`;
+    //     } else if (snapshot?.docs[0]?.data().role == "0") {
+    //       window.location.href = `home.html`;
+    //     }
+    //     console.log(snapshot.docs[0].data());
+    //   });
+    // window.location.href = `home.html`;
   } else {
     console.log("error");
     // No user is signed in.
