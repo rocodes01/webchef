@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Page</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+
+    <!-- Custom styles for this template-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/setting_page.css" rel="stylesheet" />
+    <!-- <script src='main.js'></script> -->
+
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <!-- <i class="fas fa-laugh-wink"></i> -->
+                    <img src="./img/Logo.jpg" width="40px" height="40px" alt="logo" style="border-radius: 50%" />
+                </div>
+                <div class="sidebar-brand-text mx-3">WebChef</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0" />
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider" />
+
+            <!-- Heading -->
+            <div class="sidebar-heading">Current Contest</div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Hackathon</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item">Company Specific</a>
+                        <a class="collapse-item" href="buttons.html">Self Hosted</a>
+                        <a class="collapse-item" href="cards.html">WebChef hosted</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Practice</span>
+                </a>
+                <div
+                  id="collapseUtilities"
+                  class="collapse"
+                  aria-labelledby="headingUtilities"
+                  data-parent="#accordionSidebar"
+                >
+                  <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item">Easy</a>
+                    <a class="collapse-item">Medium</a>
+                    <a class="collapse-item">Professional</a>
+                  </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider" />
+
+            <!-- Heading -->
+            <div class="sidebar-heading">Upcoming Contest</div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pending Approval</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Stats</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block" />
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">Alerts Center</h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">March 12,</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">March 12</div>
+                                        Hackathon Result Published
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">Message Center</h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="" />
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">
+                                            Please send Me list of Hackathon
+                                        </div>
+                                        <div class="small text-gray-500">HOD· 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="" />
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">
+                                            Have to give report on Monday
+                                        </div>
+                                        <div class="small text-gray-500">Sarabjit. 1d</div>
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">User</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg" />
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profile.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Setting Page -->
+                <div class="container">
+
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb" class="main-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li> -->
+                            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                        </ol>
+                    </nav>
+                    <!-- /Breadcrumb -->
+
+                    <div class="row gutters-sm">
+                        <div class="col-md-4 d-none d-md-block">
+                            <div class="card">
+                                <div class="card-body">
+                                    <nav class="nav flex-column nav-pills nav-gap-y-1">
+                                        <a href="#profile" data-toggle="tab"
+                                            class="nav-item nav-link has-icon nav-link-faded active">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-user mr-2">
+                                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                <circle cx="12" cy="7" r="4"></circle>
+                                            </svg>Profile Information
+                                        </a>
+                                        <a href="#account" data-toggle="tab"
+                                            class="nav-item nav-link has-icon nav-link-faded">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-settings mr-2">
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                                <path
+                                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                                </path>
+                                            </svg>Account Settings
+                                        </a>
+                                        <a href="#security" data-toggle="tab"
+                                            class="nav-item nav-link has-icon nav-link-faded">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-shield mr-2">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                            </svg>Security
+                                        </a>
+                                        <a href="#notification" data-toggle="tab"
+                                            class="nav-item nav-link has-icon nav-link-faded">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-bell mr-2">
+                                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                            </svg>Notification
+                                        </a>
+                                        <a href="#billing" data-toggle="tab"
+                                            class="nav-item nav-link has-icon nav-link-faded">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-credit-card mr-2">
+                                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                                            </svg>Billing
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header border-bottom mb-3 d-flex d-md-none">
+                                    <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
+                                        <li class="nav-item">
+                                            <a href="#profile" data-toggle="tab" class="nav-link has-icon active"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-user">
+                                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                                    <circle cx="12" cy="7" r="4"></circle>
+                                                </svg></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#account" data-toggle="tab" class="nav-link has-icon"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-settings">
+                                                    <circle cx="12" cy="12" r="3"></circle>
+                                                    <path
+                                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                                    </path>
+                                                </svg></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#security" data-toggle="tab" class="nav-link has-icon"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-shield">
+                                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                                </svg></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#notification" data-toggle="tab" class="nav-link has-icon"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-bell">
+                                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                                </svg></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#billing" data-toggle="tab" class="nav-link has-icon"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-credit-card">
+                                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                                                </svg></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body tab-content">
+                                    <div class="tab-pane active" id="profile">
+                                        <h6>YOUR PROFILE INFORMATION</h6>
+                                        <hr>
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <label for="fullName">Full Name</label>
+                                                <input type="text" class="form-control" id="fullName"
+                                                    aria-describedby="fullNameHelp" placeholder="Enter your fullname"
+                                                    value="" required>
+                                                <small id="fullNameHelp" class="form-text text-muted">Your name may
+                                                    appear around here where you are mentioned. You can change or remove
+                                                    it at any time.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="bio">Your Bio</label>
+                                                <textarea class="form-control autosize" id="bio"
+                                                    placeholder="Write something about you"
+                                                    style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 62px;"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="url">URL</label>
+                                                <input type="text" class="form-control" id="url"
+                                                    placeholder="Enter your website address" value="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="location">Location</label>
+                                                <input type="text" class="form-control" id="location"
+                                                    placeholder="Enter your location" value="">
+                                            </div>
+                                            <div class="form-group small text-muted">
+                                                All of the fields on this page are optional and can be deleted at any
+                                                time, and by filling them out, you're giving us consent to share this
+                                                data wherever your user profile appears.
+                                            </div>
+                                            <button type="button" class="btn btn-primary" data-target="#updateModal"
+                                                data-toggle="modal">Update Profile</button>
+                                            <button type="reset" class="btn btn-light" data-target="#cancelModal"
+                                                data-toggle="modal">Reset Changes</button>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="account">
+                                        <h6>ACCOUNT SETTINGS</h6>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="username">Username</label>
+                                                <input type="text" class="form-control" id="username"
+                                                    aria-describedby="usernameHelp" placeholder="Enter your username"
+                                                    value="">
+                                                <small id="usernameHelp" class="form-text text-muted">After changing
+                                                    your username, your old username becomes available for anyone else
+                                                    to claim.</small>
+                                            </div>
+                                            <hr>
+                                            <div class="form-group">
+                                                <label class="d-block text-danger">Delete Account</label>
+                                                <p class="text-muted font-size-sm">Once you delete your account, there
+                                                    is no going back. Please be certain.</p>
+                                            </div>
+                                            <button class="btn btn-danger" type="button">Delete Account</button>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="security">
+                                        <h6>SECURITY SETTINGS</h6>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="d-block">Change Password</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Enter your old password">
+                                                <input type="text" class="form-control mt-1" placeholder="New password">
+                                                <input type="text" class="form-control mt-1"
+                                                    placeholder="Confirm new password">
+                                            </div>
+                                        </form>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="d-block">Two Factor Authentication</label>
+                                                <button class="btn btn-info" type="button">Enable two-factor
+                                                    authentication</button>
+                                                <p class="small text-muted mt-2">Two-factor authentication adds an
+                                                    additional layer of security to your account by requiring more than
+                                                    just a password to log in.</p>
+                                            </div>
+                                        </form>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group mb-0">
+                                                <label class="d-block">Sessions</label>
+                                                <p class="font-size-sm text-secondary">This is a list of devices that
+                                                    have logged into your account. Revoke any sessions that you do not
+                                                    recognize.</p>
+                                                <ul class="list-group list-group-sm">
+                                                    <li class="list-group-item has-icon">
+                                                        <div>
+                                                            <h6 class="mb-0">Delhi, India</h6>
+                                                            <small class="text-muted">Your current session seen in
+                                                                India</small>
+                                                        </div>
+                                                        <button class="btn btn-light btn-sm ml-auto" type="button">More
+                                                            info</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="tab-pane" id="notification">
+                                        <h6>NOTIFICATION SETTINGS</h6>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="d-block mb-0">Security Alerts</label>
+                                                <div class="small text-muted mb-3">Receive security alert notifications
+                                                    via email</div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="customCheck1" checked="">
+                                                    <label class="custom-control-label" for="customCheck1">Email each
+                                                        time a vulnerability is found</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        id="customCheck2" checked="">
+                                                    <label class="custom-control-label" for="customCheck2">Email a
+                                                        digest summary of vulnerability</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <label class="d-block">SMS Notifications</label>
+                                                <ul class="list-group list-group-sm">
+                                                    <li class="list-group-item has-icon">
+                                                        Comments
+                                                        <div
+                                                            class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customSwitch1" checked="">
+                                                            <label class="custom-control-label"
+                                                                for="customSwitch1"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item has-icon">
+                                                        Updates From People
+                                                        <div
+                                                            class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customSwitch2">
+                                                            <label class="custom-control-label"
+                                                                for="customSwitch2"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item has-icon">
+                                                        Reminders
+                                                        <div
+                                                            class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customSwitch3" checked="">
+                                                            <label class="custom-control-label"
+                                                                for="customSwitch3"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item has-icon">
+                                                        Events
+                                                        <div
+                                                            class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customSwitch4" checked="">
+                                                            <label class="custom-control-label"
+                                                                for="customSwitch4"></label>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list-group-item has-icon">
+                                                        Pages You Follow
+                                                        <div
+                                                            class="custom-control custom-control-nolabel custom-switch ml-auto">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="customSwitch5">
+                                                            <label class="custom-control-label"
+                                                                for="customSwitch5"></label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="billing">
+                                        <h6>BILLING SETTINGS</h6>
+                                        <hr>
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="d-block mb-0">Payment Method</label>
+                                                <div class="small text-muted mb-3">You have not added a payment method
+                                                </div>
+                                                <button class="btn btn-info" type="button">Add Payment Method</button>
+                                            </div>
+                                            <div class="form-group mb-0">
+                                                <label class="d-block">Payment History</label>
+                                                <div
+                                                    class="border border-gray-500 bg-gray-200 p-3 text-center font-size-sm">
+                                                    You have not made any payment.</div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End of Setting Page -->
+            </div>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; WebChef 2021</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+    <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Select "Logout" below if you are ready to end your current session.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Update Modal-->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirm to update?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Select "Update" below if you are ready to save your data.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <a class="btn btn-primary" href="setting_page.html">Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Cancel Modal-->
+    <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Don't want to update?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Select "Discard" below if you don't want to update details.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <a class="btn btn-primary" href="profile.html">Discard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/app.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
