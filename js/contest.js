@@ -1,5 +1,33 @@
 // const db = firebase.firestore();
+var storage = firebase.storage();
+var storageRef = storage.ref();
 
+(function () {
+  storageRef
+    .child("06b3FMA.jpg")
+    .getDownloadURL()
+    .then((url) => {
+      console.log("downloaded");
+      // `url` is the download URL for 'images/stars.jpg'
+
+      // // This can be downloaded directly:
+      // var xhr = new XMLHttpRequest();
+      // xhr.responseType = 'blob';
+      // xhr.onload = (event) => {
+      //   var blob = xhr.response;
+      // };
+      // xhr.open('GET', url);
+      // xhr.send();
+
+      // Or inserted into an <img> element
+      var img = document.getElementById("myimg");
+      console.log(img);
+      img.setAttribute("src", url);
+    })
+    .catch((error) => {
+      // Handle any errors
+    });
+})();
 const create_contest = (event) => {
   event.preventDefault();
   const name = document.getElementById("contestname").value;

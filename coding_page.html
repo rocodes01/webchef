@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.38.0/theme/panda-syntax.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/hint/show-hint.min.css"
+      integrity="sha512-OmcLQEy8iGiD7PSm85s06dnR7G7C9C0VqahIPAj/KHk5RpOCmnC6R2ob1oK4/uwYhWa9BF1GC6tzxsC8TIx7Jg=="
+      crossorigin="anonymous"
+    />
+    <style>
+      .control-room {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 7px;
+        grid-template-areas: ". . .";
+      }
+      @media screen and (max-width: 1100px) {
+        .control-room {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          gap: 0px 7px;
+          grid-template-areas: ".";
+        }
+      }
+      #contest_desc {
+        background-color: #292a2b;
+        height: 88%;
+        color: #fff;
+        padding: 10px;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="css/codemir.css" /> -->
+  </head>
+  <body>
+    <div class="studio">
+      <div class="bar">
+        <div class="title" style="margin-bottom: 50px">
+          <h2>
+            Contest Name - <span id="contest_name">Contest Name Here</span>
+          </h2>
+          <!-- <div class="bot"><span>Some </span><span>Information</span></div> -->
+        </div>
+        <!-- <div class="buttons">
+          <button class="save">Save</button><button class="fork">Fork</button
+          ><button class="settings">Settings</button
+          ><button class="view">Change View</button>
+        </div> -->
+      </div>
+      <div class="control-room">
+        <div class="contest_desc">
+          <strong style=>Contest Details</strong>
+          <div id="contest_desc"></div>
+        </div>
+        <div class="html">
+          <strong>HTML</strong>
+          <div class="editor" id="html"></div>
+        </div>
+        <div class="html">
+          <strong>css-hint</strong>
+          <div class="editor" id="css"></div>
+        </div>
+        <!-- <div class="html">
+          <strong>JS</strong>
+          <div class="editor" id="js"></div>
+        </div> -->
+      </div>
+      <div class="live-room">
+        <iframe id="live" src="" width="100%" height="340"></iframe>
+      </div>
+      <!-- <div class="bottom-bar">
+        <div class="left-side">
+          <button>Console</button><button>Assets</button
+          ><button>Comments</button><button>Shortcuts</button>
+        </div>
+        <div class="right-side">
+          <h5>Last Saved less then a min ago</h5>
+          <button>O</button><button>Delete</button><button>Share</button
+          ><button>Export</button><button>Embed</button>
+        </div>
+      </div> -->
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyClTjq48i5qOnMbX2xNNk3vF10_yhwKPHk",
+        authDomain: "webchef-168.firebaseapp.com",
+        projectId: "webchef-168",
+        storageBucket: "gs://webchef-168.appspot.com/",
+        messagingSenderId: "813058304390",
+        appId: "1:813058304390:web:53b2734e034b661c452407",
+        measurementId: "G-96ZJDRGBFE",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- CodeMirror CDNs -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/codemirror.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/display/autorefresh.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/hint/show-hint.min.js"
+      integrity="sha512-o06fa0GmwYWeISn71QdVAqv1V3ifIgCRKabnJxmNJIUkjeTf16pcNatJIcUmntAFhXrMzeKSnSUKlDtK+UIu0g=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/hint/html-hint.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/hint/css-hint.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/addon/hint/javascript-hint.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/javascript/javascript.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/htmlmixed/htmlmixed.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/css/css.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.38.0/addon/edit/closetag.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.38.0/addon/edit/closebrackets.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.38.0/mode/xml/xml.js"></script>
+
+    <script src="js/codemir.js"></script>
+    <script src="js/contest_details.js"></script>
+  </body>
+</html>

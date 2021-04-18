@@ -350,179 +350,12 @@
           </nav>
           <!-- Begin Page Content -->
           <div class="container-fluid">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-              <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate
-                            Report</a> -->
-            </div>
-
-            <!-- Content Row -->
-            <div class="row">
-              <!-- Earnings (Monthly) Card Example -->
-              <div
-                class="col-xl-3 col-md-6 mb-4"
-                onclick="javascript:location.href='/live_contest.html'"
-                style="cursor: pointer"
-              >
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                        >
-                          Live Contest
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          12
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div
-                class="col-xl-3 col-md-6 mb-4"
-                onclick="javascript:location.href='/skills_avaliable_for_pratice.html'"
-                style="cursor: pointer"
-              >
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                        >
-                          Skills Available For Practice
-                        </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          10
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <i
-                          class="fas fa-clipboard-list fa-2x text-gray-300"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Earnings (Monthly) Card Example -->
-              <div
-                class="col-xl-3 col-md-6 mb-4"
-                onclick="location.href='#';"
-                style="cursor: pointer"
-              >
-                <div class="card border-left-info shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div
-                          class="text-xs font-weight-bold text-info text-uppercase mb-1"
-                        >
-                          Tutorials
-                        </div>
-                        <div class="row no-gutters align-items-center"></div>
-                      </div>
-                      <div class="col-auto">
-                        <i
-                          class="fas fa-clipboard-list fa-2x text-gray-300"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pending Requests Card Example -->
-              <div
-                class="col-xl-3 col-md-6 mb-4"
-                onclick="location.href='#';"
-                style="cursor: pointer"
-              >
-                <div class="card border-left-warning shadow h-100 py-2">
-                  <div class="card-body">
-                    <a href="news.html">
-                      <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                          <div
-                            class="text-xs font-weight-bold text-warning text-uppercase mb-1"
-                          >
-                            Latest Tech Posts/News
-                          </div>
-                          <div class="h5 mb-0 font-weight-bold text-gray-800">
-                            18
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <i class="fas fa-comments fa-2x text-gray-300"></i>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Content Row -->
-
-            <div class="row">
-              <!-- Area Chart -->
-              <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div
-                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
-                  >
-                    <h6 class="m-0 font-weight-bold text-primary">
-                      User Participated
-                    </h6>
-                    <div class="dropdown no-arrow">
-                      <a
-                        class="dropdown-toggle"
-                        href="#"
-                        role="button"
-                        id="dropdownMenuLink"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <i
-                          class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
-                        ></i>
-                      </a>
-                      <div
-                        class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                        aria-labelledby="dropdownMenuLink"
-                      >
-                        <a class="dropdown-item" href="#">download image</a>
-                        <a class="dropdown-item" href="#">Download data</a>
-                        <div class="dropdown-divider"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Card Body -->
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <canvas id="myAreaChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  
           <!-- /.container-fluid -->
+          <h1>Top News/Posts of the week from <a href="https://dev.to" target="_blank">Dev.to</a></h1>
+          <div id="news-container">
+
+          </div>
         </div>
         <!-- End of Main Content -->
 
@@ -586,29 +419,29 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
     <!-- Custom scripts for all pages-->
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script> -->
 
     <script>
       var firebaseConfig = {
@@ -626,5 +459,6 @@
     </script>
     <script src="js/NavBar.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/news.js"></script>
   </body>
 </html>
