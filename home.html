@@ -129,7 +129,7 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Upcoming Contest</div>
+        <div class="sidebar-heading">Other Content</div>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -137,13 +137,26 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapsePages"
+            data-target="#collapseUtil"
             aria-expanded="true"
-            aria-controls="collapsePages"
+            aria-controls="collapseUtil"
           >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pending Approval</span>
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Quiz</span>
           </a>
+          <div
+            id="collapseUtil"
+            class="collapse"
+            aria-labelledby="headingUtil"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="CreateQuiz.html">Create Quiz</a>
+              <a class="collapse-item" href="TakeQuiz.html"
+                >See Available Quizzes</a
+              >
+            </div>
+          </div>
         </li>
 
         <!-- Nav Item - Charts -->
