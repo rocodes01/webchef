@@ -13,6 +13,10 @@ const savetoLocal = (value) => {
   console.log(value);
   window.location.href = "contest_details.html";
 };
+
+// It's just a hack solution to check correct answer
+// If any question has option which is correct answer in another question
+// then it will give false answer::correct it later
 const checkAnswer = (event) => {
   const { value } = event.target;
   correctOptionsArr.includes(value) ? alert("right Answer") : "";
