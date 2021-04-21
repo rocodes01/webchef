@@ -1,6 +1,39 @@
-/**
- ** Ug
- */
+const contest_naam = localStorage.getItem("contest_name");
+let contestsRef = firebase.firestore().collection("contests");
+let refId;
+contestsRef
+  .where("name", "==", contest_naam)
+  .get()
+  .then((snapshot) => {
+    refId = snapshot?.docs[0].id;
+  });
+let htmlcode = "";
+let csscode = "";
+const updatecontentCss = (val) => {
+  csscode = val;
+};
+const updatecontentHtml = (val) => {
+  htmlcode = val;
+};
+
+const saveToDB = () => {
+  const finalCode = `<head>
+      <style>
+      ${csscode}
+      </style>
+      </head>
+      <body>
+      ${htmlcode}
+      </body>
+      `;
+  if (!htmlcode || !csscode) {
+    alert("write Some Code To Submit");
+  } else {
+    contestsRef.doc(refId).update({
+      submissions: firebase.firestore.FieldValue.arrayUnion(finalCode),
+    });
+  }
+};
 
 const Studio = function () {
   /**
@@ -96,9 +129,11 @@ liveRoom.contentWindow.document.head.appendChild(script);
 
 CodeMirror.on(studio.editor.html, "change", function () {
   liveRoom.contentWindow.document.body.innerHTML = studio.editor.html.getValue();
+  updatecontentHtml(studio.editor.html.getValue());
 });
 CodeMirror.on(studio.editor.css, "change", function () {
   liveRoom.contentWindow.document.getElementById(
     "style"
   ).innerHTML = studio.editor.css.getValue();
+  updatecontentCss(studio.editor.css.getValue());
 });

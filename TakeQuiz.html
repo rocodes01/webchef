@@ -307,8 +307,7 @@
                   aria-expanded="false"
                 >
                   <span
-                    id="username"
-                    class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    class="mr-2 d-none d-lg-inline text-gray-600 small username"
                   ></span>
                   <img
                     class="img-profile rounded-circle"
@@ -352,39 +351,74 @@
           <div class="container-fluid">
             <!-- Page Heading -->
             <div
-              class="mb-4"
+              class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-
-              <h1 class="h1 mb-0 text-gray-800" id="contest_name">Contest Name</h1>
-              
-              Created By:<h4 id="contest_creater"></h4>
-
-
+              <h1 class="h3 mb-0 text-gray-800">Take Quiz</h1>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <strong>Contest Description:</strong><p id="contest_desc"></p>
 
-                    <div>
-                        <strong>Dates:</strong>
-                        <p id="start_date"></p>
-                        <p id="end_date"></p>
+            <!-- Content Row -->
+            <div class="row">
+              <div class="card mt-2 col-md-12">
+                <div class="row">
+                  <div class="pt-4 pb-4 col-12">QUESTION 1</div>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="input-group mb-3 pl-3">
+                        <div class="input-group-text">
+                          <input
+                            type="radio"
+                            name="1"
+                            aria-label="Radio button for following text input"
+                          />
+                        </div>
+                        <p class="m-2">OPTION 1</p>
+                      </div>
                     </div>
-                    <a href="coding_page.html"><button class="btn btn-primary d-flex justify-content-end ">Go To Contest</button></a>
-                </div>
-
-            </div>
-            <div class="card">
-                <div class="card-title">
-                    <strong>Recent Public Sumbmissions</strong>
+                    <div class="col-6">
+                      <div class="input-group mb-3 pl-3">
+                        <div class="input-group-text">
+                          <input
+                            type="radio"
+                            name="1"
+                            aria-label="Radio button for following text input"
+                          />
+                        </div>
+                        <p class="m-2">OPTION 1</p>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group mb-3 pl-3">
+                        <div class="input-group-text">
+                          <input
+                            type="radio"
+                            name="1"
+                            aria-label="Radio button for following text input"
+                          />
+                        </div>
+                        <p class="m-2">OPTION 1</p>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="input-group mb-3 pl-3">
+                        <div class="input-group-text">
+                          <input
+                            type="radio"
+                            name="1"
+                            aria-label="Radio button for following text input"
+                          />
+                        </div>
+                        <p class="m-2">OPTION 1</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="card-body" id="subs">
-                    
                 </div>
-
+              </div>
             </div>
-            
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
         </div>
+        <!-- End of Main Content -->
 
         <!-- Footer -->
         <footer class="sticky-footer bg-white">
@@ -444,7 +478,6 @@
           </div>
         </div>
       </div>
-      
     </div>
 
     <!-- Bootstrap core JavaScript-->
@@ -458,11 +491,11 @@
     <script src="js/app.js"></script>
 
     <!-- Page level plugins -->
-    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
-    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 
@@ -470,14 +503,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 
     <script>
       var firebaseConfig = {
         apiKey: "AIzaSyClTjq48i5qOnMbX2xNNk3vF10_yhwKPHk",
         authDomain: "webchef-168.firebaseapp.com",
         projectId: "webchef-168",
-        storageBucket: "gs://webchef-168.appspot.com/",
+        storageBucket: "webchef-168.appspot.com",
         messagingSenderId: "813058304390",
         appId: "1:813058304390:web:53b2734e034b661c452407",
         measurementId: "G-96ZJDRGBFE",
@@ -487,7 +519,7 @@
       firebase.initializeApp(firebaseConfig);
     </script>
     <script src="js/NavBar.js"></script>
-    <script src="js/contest_details.js"></script>
-    <script src="js/home.js"></script>
+    <script src="js/firebase.js" defer></script>
+    <script src="js/home.js" defer></script>
   </body>
 </html>
