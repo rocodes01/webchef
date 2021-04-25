@@ -51,7 +51,7 @@
       <div class="bar">
         <div class="title" style="margin-bottom: 50px">
           <h2>
-            Contest Name - <span id="contest_name">Contest Name Here</span>
+            <span id="contest_name">Contest Name Here</span>
           </h2>
           <!-- <div class="bot"><span>Some </span><span>Information</span></div> -->
         </div>
@@ -62,7 +62,7 @@
         </div> -->
       </div>
       <div class="control-room">
-        <div class="contest_desc">
+        <div class="contest_desc" id="practiceOrContest">
           <strong style=>Contest Details</strong>
           <div id="contest_desc"></div>
         </div>
@@ -82,8 +82,8 @@
       <div class="live-room">
         <iframe id="live" src="" width="100%" height="340"></iframe>
       </div>
-      <div>
-        <button onclick="saveToDB()">Submit Your Code</button>
+      <div id="submitBtn">
+        
       </div>
       <!-- <div class="bottom-bar">
         <div class="left-side">
@@ -164,6 +164,6 @@
 
     <script src="js/codemir.js"></script>
     <script src="js/coding_page.js"></script>
-    <script src="js/contest_details.js"></script>
+    <!-- <script src="js/contest_details.js"></script> -->
   </body>
 </html>

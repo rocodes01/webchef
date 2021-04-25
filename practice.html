@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Profile Update</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>WebChef</title>
+
+    <!-- Custom fonts for this template-->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
       rel="stylesheet"
@@ -17,10 +25,10 @@
 
     <!-- Custom styles for this template-->
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/profile_update.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
+    <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
       <ul
@@ -73,7 +81,7 @@
             aria-controls="collapseTwo"
           >
             <i class="fas fa-fw fa-cog"></i>
-            <span>Hackathon</span>
+            <span>Contests</span>
           </a>
           <div
             id="collapseTwo"
@@ -82,19 +90,17 @@
             data-parent="#accordionSidebar"
           >
             <div class="bg-white py-2 collapse-inner rounded">
-              <a class="collapse-item">Company Specific</a>
-              <a class="collapse-item" href="buttons.html">Self Hosted</a>
-              <a class="collapse-item" href="cards.html">WebChef hosted</a>
+              <a class="collapse-item" href="create_contest.html"
+                >Create A contest</a
+              >
+              <a class="collapse-item">View Previous Contests</a>
             </div>
           </div>
         </li>
 
         <!-- Nav Item - Utilities Collapse Menu -->
         <li class="nav-item">
-          <a
-            class="nav-link"
-            href="practice.html"
-          >
+          <a class="nav-link" href="practice.html">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Practice</span>
           </a>
@@ -104,7 +110,7 @@
         <hr class="sidebar-divider" />
 
         <!-- Heading -->
-        <div class="sidebar-heading">Upcoming Contest</div>
+        <div class="sidebar-heading">Other Content</div>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
@@ -112,15 +118,27 @@
             class="nav-link collapsed"
             href="#"
             data-toggle="collapse"
-            data-target="#collapsePages"
+            data-target="#collapseUtil"
             aria-expanded="true"
-            aria-controls="collapsePages"
+            aria-controls="collapseUtil"
           >
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pending Approval</span>
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Quiz</span>
           </a>
+          <div
+            id="collapseUtil"
+            class="collapse"
+            aria-labelledby="headingUtil"
+            data-parent="#accordionSidebar"
+          >
+            <div class="bg-white py-2 collapse-inner rounded">
+              <a class="collapse-item" href="CreateQuiz.html">Create Quiz</a>
+              <a class="collapse-item" href="TakeQuiz.html"
+                >See Available Quizzes</a
+              >
+            </div>
+          </div>
         </li>
-
         <!-- Nav Item - Charts -->
         <li class="nav-item">
           <a class="nav-link">
@@ -137,12 +155,8 @@
           <button class="rounded-circle border-0" id="sidebarToggle"></button>
         </div>
       </ul>
-      <!-- End of Sidebar -->
-
       <div id="content-wrapper" class="d-flex flex-column">
-        <!-- Main Content -->
         <div id="content">
-          <!-- Topbar -->
           <nav
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
@@ -286,10 +300,8 @@
                   aria-expanded="false"
                 >
                   <span
-                    id="username"
                     class="mr-2 d-none d-lg-inline text-gray-600 small username"
-                    >User</span
-                  >
+                  ></span>
                   <img
                     class="img-profile rounded-circle"
                     src="img/undraw_profile.svg"
@@ -300,11 +312,11 @@
                   class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                   aria-labelledby="userDropdown"
                 >
-                  <a class="dropdown-item" href="profile.html">
+                  <a class="dropdown-item" href="/profile.html">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                   </a>
-                  <a class="dropdown-item" href="setting_page.html">
+                  <a class="dropdown-item" href="#">
                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                     Settings
                   </a>
@@ -328,201 +340,20 @@
               </li>
             </ul>
           </nav>
-          <!-- End of Topbar -->
-          <!-- Profile Update Container -->
-          <div class="container">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="main-breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-                <li class="breadcrumb-item">
-                  <a href="profile.html">Profile</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Profile Update
-                </li>
-              </ol>
-            </nav>
-            <!-- /Breadcrumb -->
-
-            <div class="row gutters">
-              <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="account-settings">
-                      <div class="user-profile">
-                        <div class="user-avatar">
-                          <img
-                            src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                            alt="Maxwell Admin"
-                            style="border-radius: 50%"
-                            class="img img-profile"
-                            width="220px"
-                          />
-                        </div>
-                        <h5 class="user-name username">UserName</h5>
-                        <h6 class="user-email useremail"">
-                          yuki@Maxwell.com
-                        </h6>
-                      </div>
-                      <div class="about">
-                        <h5 class="mb-2 text-primary">Bio</h5>
-                        <p>
-                          I'm Full Stack Designer I enjoy creating user-centric,
-                          delightful and human experiences.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <div class="row gutters">
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
-                      >
-                        <h6 class="mb-3 text-primary">Personal Details</h6>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="fullName">Full Name</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="fullName"
-                            placeholder="Enter full name"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="eMail">Email</label>
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="eMail"
-                            placeholder="Enter email ID"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="phone">Phone</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="phone"
-                            placeholder="Enter phone number"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="website">Website URL</label>
-                          <input
-                            type="url"
-                            class="form-control"
-                            id="website"
-                            placeholder="Website url"
-                            required
-                          />
-                        </div>
-                      </div> -->
-                    </div>
-                    <div class="row gutters">
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
-                      >
-                        <h6 class="mb-3 text-primary">Address</h6>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="Street">Street</label>
-                          <input
-                            type="name"
-                            class="form-control"
-                            id="Street"
-                            placeholder="Enter Street"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="ciTy">City</label>
-                          <input
-                            type="name"
-                            class="form-control"
-                            id="ciTy"
-                            placeholder="Enter City"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="sTate">State</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="sTate"
-                            placeholder="Enter State"
-                            required
-                          />
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                        <div class="form-group">
-                          <label for="zIp">Zip Code</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="zIp"
-                            placeholder="Zip Code"
-                            required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row gutters">
-                      <div
-                        class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"
-                      >
-                        <div class="text-right">
-                          <button
-                            type="button"
-                            id="submit"
-                            name="submit"
-                            class="btn btn-secondary"
-                            data-target="#cancelModal"
-                            data-toggle="modal"
-                          >
-                            Cancel
-                          </button>
-                          <button
-                            type="button"
-                            id="submit"
-                            name="submit"
-                            class="btn btn-primary"
-                            data-target="#updateModal"
-                            data-toggle="modal"
-                          >
-                            Update
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">List Of Available Questions</h1>
             </div>
+
+            <!-- Content Row -->
+            <div class="row" id="card_container"></div>
+            <!-- Content Row -->
           </div>
-          <!-- End of Profile Update -->
+          <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
 
@@ -536,7 +367,9 @@
         </footer>
         <!-- End of Footer -->
       </div>
+      <!-- End of Content Wrapper -->
     </div>
+    <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -576,89 +409,9 @@
             >
               Cancel
             </button>
-            <a class="btn btn-primary" href="index.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Update Modal-->
-    <div
-      class="modal fade"
-      id="updateModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Confirm to update?
-            </h5>
-            <button
-              class="close"
-              type="button"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
+            <button class="btn btn-primary" onclick="logout(event)">
+              Logout
             </button>
-          </div>
-          <div class="modal-body">
-            Select "Update" below if you are ready to save your data.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <a class="btn btn-primary" href="profile.html">Update</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cancel Modal-->
-    <div
-      class="modal fade"
-      id="cancelModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Don't want to update?
-            </h5>
-            <button
-              class="close"
-              type="button"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            Select "Discard" below if you don't want to update details.
-          </div>
-          <div class="modal-footer">
-            <button
-              class="btn btn-secondary"
-              type="button"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <a class="btn btn-primary" href="profile.html">Discard</a>
           </div>
         </div>
       </div>
@@ -675,11 +428,11 @@
     <script src="js/app.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
 
@@ -687,6 +440,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 
     <script>
       var firebaseConfig = {
@@ -702,7 +457,8 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
-
-    <script src="./js/home.js"></script>
+    <script src="js/NavBar.js"></script>
+    <script src="js/practice.js" defer></script>
+    <script src="js/home.js" defer></script>
   </body>
 </html>

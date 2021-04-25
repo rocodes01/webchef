@@ -1,5 +1,6 @@
 const contest_naam = localStorage.getItem("contest_name");
 let contestsRef = firebase.firestore().collection("contests");
+let practiceOrContest = document.getElementById("practiceOrContest");
 let refId;
 contestsRef
   .where("name", "==", contest_naam)

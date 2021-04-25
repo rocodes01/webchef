@@ -1,11 +1,12 @@
 (function () {
   quizRef = firebase.firestore().collection("quiz");
   quizRef.get().then((snapshot) => {
-    snapshot.docs.map((d) => {
-      createCard(d.data());
+    snapshot.docs.slice(0, 10).map((d, i) => {
+      createCard(d.data(), i);
     });
   });
 })();
+let correctAnswersCount = 0;
 const divToInsert = document.getElementById("card_container");
 let correctOptionsArr = [];
 const savetoLocal = (value) => {
@@ -18,25 +19,36 @@ const savetoLocal = (value) => {
 // If any question has option which is correct answer in another question
 // then it will give false answer::correct it later
 const checkAnswer = (event) => {
-  const { value } = event.target;
-  correctOptionsArr.includes(value) ? alert("right Answer") : "";
+  const { placeholder, id } = event.target;
+  console.log(placeholder, "Id", id);
+  correctOptionsArr[id] == placeholder ? correctAnswersCount++ : "";
+  console.log(correctAnswersCount);
+};
+const showResult = () => {
+  alert(
+    `You Got ${correctAnswersCount} out of ${correctOptionsArr.length} Marks`
+  );
 };
 
-const createCard = (data) => {
+const createCard = (data, index) => {
   console.log(data);
-  correctOptionsArr.push(data.correct);
+  correctOptionsArr.push(data.correct.replace(/\s/g, ""));
   let optArr = [data.correct, data.option_1, data.option_2, data.option_3];
+  // console.log(optArr);
   optArr.sort(() => 0.5 - Math.random());
+  // console.log(optArr);
   //   console.log(data);
   const createOptions = optArr.map((e, i) => {
+    console.log(e);
     return `
-      <div class="form-check">
+      <div class="form-check" >
           <input
             class="form-check-input"
             type="radio"
-            name="options"
+            name="optionsFor_${index}"
             value=${e}
-            id="option_${i}"
+            placeholder=${e.replace(/\s/g, "")}
+            id=${index}
             onclick="checkAnswer(event)"
           /><label
             class="form-check-label"
@@ -55,7 +67,8 @@ const createCard = (data) => {
        ${createOptions.join("")}
       </div>
     </div>
+    
   </div>`;
   divToInsert.innerHTML += cardData;
-  console.log(correctOptionsArr);
+  // console.log(correctOptionsArr);
 };
