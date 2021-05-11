@@ -28,6 +28,14 @@
   </head>
 
   <body class="bg-gradient-primary">
+    <div
+      class="toast mt-2 bg-danger text-white"
+      role="alert"
+      id="toast"
+      style="position: absolute; top: 0; right: 0; z-index: 10"
+    >
+      <div class="toast-body" id="toastBody"></div>
+    </div>
     <div class="container">
       <div class="card o-hidden border-0 shadow-lg my-5">
         <div class="card-body p-0">
@@ -73,6 +81,7 @@
                       <label for="">Select User Type:</label>
 
                       <select name="" class="custom-select mb-2" id="usertype">
+                        <option>Select User Type</option>
                         <option value="1">Teacher/Organization</option>
                         <option value="0">Student/Individual</option>
                       </select>
