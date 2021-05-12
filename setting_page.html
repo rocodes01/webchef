@@ -409,7 +409,7 @@
                                         <h6>ACCOUNT SETTINGS</h6>
                                         <hr>
                                         <form>
-                                            <div class="form-group">
+                                            <!-- <div class="form-group">
                                                 <label for="username">Username</label>
                                                 <input type="text" class="form-control" id="username"
                                                     aria-describedby="usernameHelp" placeholder="Enter your username"
@@ -418,7 +418,7 @@
                                                     your username, your old username becomes available for anyone else
                                                     to claim.</small>
                                             </div>
-                                            <hr>
+                                            <hr> -->
                                             <div class="form-group">
                                                 <label class="d-block text-danger">Delete Account</label>
                                                 <p class="text-muted font-size-sm">Once you delete your account, there
@@ -432,12 +432,13 @@
                                         <hr>
                                         <form>
                                             <div class="form-group">
-                                                <label class="d-block">Change Password</label>
-                                                <input type="text" class="form-control"
+                                                 <label class="d-block">Change Password</label>
+                                                <!--<input type="text" class="form-control"
                                                     placeholder="Enter your old password">
                                                 <input type="text" class="form-control mt-1" placeholder="New password">
                                                 <input type="text" class="form-control mt-1"
-                                                    placeholder="Confirm new password">
+                                                    placeholder="Confirm new password"> -->
+                                                    <button class="btn btn-primary" onclick="sendResetEmail()">Send Change Password Link to Mail</button>
                                             </div>
                                         </form>
                                         <hr>
@@ -461,7 +462,8 @@
                                                 <ul class="list-group list-group-sm">
                                                     <li class="list-group-item has-icon">
                                                         <div>
-                                                            <h6 class="mb-0">Delhi, India</h6>
+                                                            <h6 class="mb-0" id="OS"></h6>
+                                                            <h6 class="mb-0" id="Browser"></h6>
                                                             <small class="text-muted">Your current session seen in
                                                                 India</small>
                                                         </div>
@@ -674,6 +676,29 @@
         </div>
     </div>
 
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyClTjq48i5qOnMbX2xNNk3vF10_yhwKPHk",
+        authDomain: "webchef-168.firebaseapp.com",
+        projectId: "webchef-168",
+        storageBucket: "webchef-168.appspot.com",
+        messagingSenderId: "813058304390",
+        appId: "1:813058304390:web:53b2734e034b661c452407",
+        measurementId: "G-96ZJDRGBFE",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -685,12 +710,12 @@
     <script src="js/app.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
+    <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+    <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
+    <script src="js/setting_page.js"></script>
 </body>
 
 </html>
