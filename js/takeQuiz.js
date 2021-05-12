@@ -34,7 +34,7 @@ const createCard = (data, index) => {
   console.log(data);
   correctOptionsArr.push(data.correct.replace(/\s/g, ""));
   let optArr = [data.correct, data.option_1, data.option_2, data.option_3];
-  // console.log(optArr);
+  // JUmble Options
   optArr.sort(() => 0.5 - Math.random());
   // console.log(optArr);
   //   console.log(data);
