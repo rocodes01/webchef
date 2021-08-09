@@ -73,10 +73,13 @@
                         </div>
                       </div>
                       <button
-                        onclick="login(event)"
+                        onclick="navigator.share({
+                url: "www.hackernoon.com",
+                text: "Test share ",
+              })"
                         class="btn btn-primary btn-user btn-block"
                       >
-                        Login
+                        Login test Share
                       </button>
                       <hr />
                       <button
