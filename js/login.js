@@ -5,35 +5,31 @@ let userRef = db.collection("users");
 let currentUser;
 const login = (e) => {
   e.preventDefault();
-  navigator.share({
-                url: "www.hackernoon.com",
-                text: "Test share ",
-              });
-//   const email = document.getElementById("InputEmail").value;
-//   const password = document.getElementById("InputPassword").value;
-//   firebase
-//     .auth()
-//     .signInWithEmailAndPassword(email, password)
-//     .then((userCredential) => {
-//       // Signed in
-//       currentUser = userRef
-//         .where("email", "==", userCredential.user.email)
-//         .get()
-//         .then((snapshot) => {
-//           if (snapshot?.docs[0]?.data().role == 1) {
-//             window.location.href = `home.html`;
-//           } else if (snapshot?.docs[0]?.data().role == 0) {
-//             window.location.href = `user_home.html`;
-//           }
-//         });
-//     })
-//     .catch((error) => {
-//       var errorCode = error.code;
-//       var errorMessage = error.message;
-//       document.getElementById("InputEmail").innerText = "";
-//       document.getElementById("InputPassword").innerText = "";
-//       alert(`Wrong Credential, Please try Again`);
-//     });
+  const email = document.getElementById("InputEmail").value;
+  const password = document.getElementById("InputPassword").value;
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in
+      currentUser = userRef
+        .where("email", "==", userCredential.user.email)
+        .get()
+        .then((snapshot) => {
+          if (snapshot?.docs[0]?.data().role == 1) {
+            window.location.href = `home.html`;
+          } else if (snapshot?.docs[0]?.data().role == 0) {
+            window.location.href = `user_home.html`;
+          }
+        });
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      document.getElementById("InputEmail").innerText = "";
+      document.getElementById("InputPassword").innerText = "";
+      alert(`Wrong Credential, Please try Again`);
+    });
 };
 const loginWithGoogle = () => {
   console.log(provider);
